@@ -3,21 +3,18 @@ const overlay = document.querySelector('.overlay');
 const menuOpen = document.querySelector('.menu-btn');
 const menuClose = document.querySelector('.close');
 
-// add event listener
-menuOpen.addEventListener('click', function(){
-    menu.style.right = 0;
-    menuClose.style.display = 'block';
-    overlay.style.display = 'block';
-    console.log('clicked');
-})
-menuClose.addEventListener('click', () => {
-    menu.style.right = '-80%';
-    menuClose.style.display = 'none';
-    overlay.style.display = 'none';
-});
+const openMenu = () => {
+  menu.style.transform = 'translateX(0)';
+  menuClose.style.display = 'block';
+  overlay.style.display = 'block';
+};
 
-overlay.addEventListener('click', () => {
-    menu.style.right = '-80%';
-    menuClose.style.display = 'none';
-    overlay.style.display = 'none';
-});
+const closeMenu = () => {
+  menu.style.transform = 'translateX(100%)';
+  menuClose.style.display = 'none';
+  overlay.style.display = 'none';
+};
+
+menuOpen.addEventListener('click', openMenu);
+menuClose.addEventListener('click', closeMenu);
+overlay.addEventListener('click', closeMenu);
