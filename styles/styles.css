@@ -7,10 +7,13 @@
     box-sizing: border-box;
 }
 /* LAYOUT STYLING */
+html, body {
+  overflow-x: hidden;
+}
 .container{
     background: #FFFFFF;
     font-family: Inter;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* HERO SECTION STYLING */
@@ -41,6 +44,8 @@ header .nav{
     background: #FFFFFF;
     position: absolute;
     top: 0;
+    right: 0;
+    left: 0;
     transform: translateX(100%);
     transition: all 1s ease-in-out;
 }
@@ -450,10 +455,7 @@ header .nav{
 
 /* MEDIA SCREEN */
 /* FOR MOBILE PHONE */
-@media (max-width: 480px) {
-    body{
-        overflow-x: hidden;
-    }   
+@media (max-width: 480px) {  
     /* HEADER */
 header{
     width: 100%;
@@ -481,7 +483,7 @@ header .nav{
     gap: 30px;
     padding: 80px 20px;
     z-index: 30;
-    /* overflow-x: hidden; */
+    transform: translateX(100%);
 }
 .menu-btn{
     display: block;
