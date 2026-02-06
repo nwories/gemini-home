@@ -481,6 +481,7 @@ header .nav{
     gap: 30px;
     padding: 80px 20px;
     z-index: 30;
+    /* overflow-x: hidden; */
 }
 .menu-btn{
     display: block;

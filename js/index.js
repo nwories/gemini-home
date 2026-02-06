@@ -7,12 +7,14 @@ const openMenu = () => {
   menu.style.transform = 'translateX(0)';
   menuClose.style.display = 'block';
   overlay.style.display = 'block';
+  document.body.style.overflow = 'hidden';
 };
 
 const closeMenu = () => {
-  menu.style.transform = 'translateX(100%)';
+  menu.style.transform = 'translateX(110%)';
   menuClose.style.display = 'none';
   overlay.style.display = 'none';
+  document.body.style.overflow = '';
 };
 
 menuOpen.addEventListener('click', openMenu);
